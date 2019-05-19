@@ -1,6 +1,6 @@
 const words = [
     "Arya Stark",
-    "Sandor",
+    "Sandor Clegane",
     "Tywin Lannister",
     "Lord of Light",
     "Red Wedding",
@@ -11,7 +11,18 @@ const words = [
     "Iron Throne",
     "High Garden",
     "Winterfell",
-    "Oberyn Martel"
+    "Oberyn Martel",
+    "The Mountain",
+    "Dragon Glass",
+    "Longclaw",
+    "Tormund Giantsbane",
+    "Kings Landing",
+    "Euron Greyjoy",
+    "The Golden Company",
+    "Sansa Stark",
+    "Ser Bronn Of The Blackwater",
+    "Littlefinger",
+    "King Joffrey"
 ];
 
 function getWord() {

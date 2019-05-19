@@ -42,14 +42,21 @@ class Hangman extends Component {
 
     handleGuess = (event) => {
         let guess = event.target.value;
-        this.setState(st => ({
-            guessed: st.guessed.add(guess),
-            numWrong: st.numWrong + (st.answer.includes(guess) ? 0 : 1)
-          }));
-        // this.setState({
-        //     guessed: guessed.add(guess),
-        //     numWrong: 
-        // })
+        let wrong = this.state.numWrong;
+        let word = this.state.answer;
+        let guessedSoFar = this.state.guessed;
+
+        this.setState({
+            guessed: guessedSoFar.add(guess),
+            numWrong: wrong + (word.includes(guess) ? 0 : 1)
+        })
+
+        //BETTER WAY USING STATE IN A FUNCTION
+        // this.setState(st => ({
+        //     guessed: st.guessed.add(guess),
+        //     numWrong: st.numWrong + (st.answer.includes(guess) ? 0 : 1)
+        //   }));
+        
     }
 
     handleRestart = () => {
@@ -63,13 +70,19 @@ class Hangman extends Component {
     render() {
         let imgSrc = this.props.images[this.state.numWrong];
         let altTxt = `${this.state.numWrong}/6`
+        const gameOver = this.state.numWrong >= this.props.maxWrong;
+        const isWinner = this.answerWord().join("") === this.state.answer;
+        let gameState = this.createButtons();
+        if(isWinner) gameState = 'You Win!';
+        if(gameOver) gameState = 'You Lose!';
+        
         return(
             <div>
                 <h1>Hangman</h1>
                 <img src={imgSrc} alt={altTxt}></img>
                 <p>Wrong Guesses: {this.state.numWrong}</p>
-                <p className="Picked-word">{this.answerWord()}</p>
-                <p className="Hangman-buttons">{this.createButtons()}</p>
+                <p className="Picked-word">{gameOver ? this.state.answer : this.answerWord()}</p>
+                <p className="Hangman-buttons">{gameState}</p>
                 <button className="Btn-restart" onClick={this.handleRestart}>RESTART</button>
             </div>
         )
