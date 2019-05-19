@@ -3,3 +3,16 @@
     margin: 0.4em -1em 0.2em 0;
     font-size: 2rem;
 }
+
+.Hangman-buttons {
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    margin-top: 0;
+}
+
+.Btn-restart {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}

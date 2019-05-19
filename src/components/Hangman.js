@@ -28,6 +28,38 @@ class Hangman extends Component {
         .map(ltr => (this.state.guessed.has(ltr) ? ltr : "_"));
     }
 
+    createButtons = () => {
+        return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(ltr => (
+            <button
+            key={ltr}
+            value={ltr}
+            onClick={this.handleGuess}
+            disabled={this.state.guessed.has(ltr)}
+            >
+            {ltr}
+            </button>));
+    }
+
+    handleGuess = (event) => {
+        let guess = event.target.value;
+        this.setState(st => ({
+            guessed: st.guessed.add(guess),
+            numWrong: st.numWrong + (st.answer.includes(guess) ? 0 : 1)
+          }));
+        // this.setState({
+        //     guessed: guessed.add(guess),
+        //     numWrong: 
+        // })
+    }
+
+    handleRestart = () => {
+        this.setState({
+            numWrong: 0,
+            guessed: new Set(" "),
+            answer: getWord()
+        })
+    }
+
     render() {
         let imgSrc = this.props.images[this.state.numWrong];
         let altTxt = `${this.state.numWrong}/6`
@@ -37,6 +69,8 @@ class Hangman extends Component {
                 <img src={imgSrc} alt={altTxt}></img>
                 <p>Wrong Guesses: {this.state.numWrong}</p>
                 <p className="Picked-word">{this.answerWord()}</p>
+                <p className="Hangman-buttons">{this.createButtons()}</p>
+                <button className="Btn-restart" onClick={this.handleRestart}>RESTART</button>
             </div>
         )
     }

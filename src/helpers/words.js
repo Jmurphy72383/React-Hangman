@@ -15,7 +15,7 @@ const words = [
 ];
 
 function getWord() {
-    return words[Math.floor(Math.random() * words.length)];
+    return words[Math.floor(Math.random() * words.length)].toUpperCase();
 }
 
 export { getWord };
