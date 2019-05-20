@@ -35,6 +35,10 @@ class Hangman extends Component {
             value={ltr}
             onClick={this.handleGuess}
             disabled={this.state.guessed.has(ltr)}
+            style={{backgroundColor: 'steelgrey',
+                    fontSize: '20px',
+                    border: '1px solid steelblue',
+                    margin: '3px'}}
             >
             {ltr}
             </button>));
@@ -78,10 +82,12 @@ class Hangman extends Component {
         
         return(
             <div>
-                <h1>Hangman</h1>
+                <h1 className="Title-H1">Game of Thrones</h1>
+                <h2>Hangman</h2>
                 <img src={imgSrc} alt={altTxt}></img>
                 <p>Wrong Guesses: {this.state.numWrong}</p>
-                <p className="Picked-word">{gameOver ? this.state.answer : this.answerWord()}</p>
+                <p className="Picked-word">{gameOver ? this
+                    .state.answer : this.answerWord()}</p>
                 <p className="Hangman-buttons">{gameState}</p>
                 <button className="Btn-restart" onClick={this.handleRestart}>RESTART</button>
             </div>

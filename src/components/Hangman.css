@@ -1,18 +1,41 @@
+body {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bolder;
+}
+
+.Title-H1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
 .Picked-word {
-    letter-spacing: 1em;
+    letter-spacing: .5em;
     margin: 0.4em -1em 0.2em 0;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .Hangman-buttons {
     text-align: center;
     display: inline-block;
-    width: 250px;
-    margin-top: 0;
+    /* width: 250px; */
+
 }
 
 .Btn-restart {
     text-align: center;
     display: block;
     margin: 0 auto;
+}
+
+button:hover {
+    background-color: red;
 }
