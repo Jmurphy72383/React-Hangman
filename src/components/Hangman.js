@@ -82,8 +82,8 @@ class Hangman extends Component {
         
         return(
             <div>
-                <h1 className="Title-H1">Game of Thrones</h1>
-                <h2>Hangman</h2>
+                {/* <h1 className="Title-H1">Game of Thrones</h1> */}
+                <h1 className="Title-H1">Hangman</h1>
                 <img src={imgSrc} alt={altTxt}></img>
                 <p>Wrong Guesses: {this.state.numWrong}</p>
                 <p className="Picked-word">{gameOver ? this

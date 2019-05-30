@@ -48,7 +48,9 @@ const words = [
     "A Song Of Ice And Fire",
     "The Night King",
     "The High Sparrow",
-    "Ser Barristan Selmy"
+    "Ser Barristan Selmy",
+    "Khal Drogo",
+    "Brienne Of Tarth"
 ];
 
 function getWord() {
