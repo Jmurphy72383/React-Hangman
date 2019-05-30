@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85ac7abd9764548bbbe0b5693bc4f4d7",
+    "revision": "e5984f981a58cb9e626f5c66bbf4a0c7",
     "url": "/React-Hangman/index.html"
   },
   {
-    "revision": "a89410186d07431c90ef",
-    "url": "/React-Hangman/static/css/main.8b9fe31e.chunk.css"
+    "revision": "0ad03d23132d8be2a6d4",
+    "url": "/React-Hangman/static/css/main.60a472aa.chunk.css"
   },
   {
     "revision": "c76acbd8c3450c465efd",
     "url": "/React-Hangman/static/js/2.4cc8969d.chunk.js"
   },
   {
-    "revision": "a89410186d07431c90ef",
+    "revision": "0ad03d23132d8be2a6d4",
     "url": "/React-Hangman/static/js/main.292a518c.chunk.js"
   },
   {
