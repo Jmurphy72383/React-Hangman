@@ -1,22 +1,39 @@
 body {
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bolder;
-    width: 95vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.hangman-div {
+    width: 99%;
+    height: 95vh;
+    border: 3px solid steelblue;
+    margin: 1% auto;
+    
+}
+
+.bimg-div {
+    background: url('../img/got_faces1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 87%;
+}
+
+img {
+    margin-top: 18px;
 }
 
 .Title-H1 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0;
-    color: silver;
-}
-
-h2 {
-    font-size: 30px;
-    margin-top: 0;
+    color: crimson;
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
     color: crimson;
 }
 
@@ -24,22 +41,51 @@ p {
     letter-spacing: .5em;
     margin: 0.4em -1em 0.2em 0;
     font-size: 3rem;
-    color: silver;
+    /* color: silver; */
+    color: white;
 }
 
 .Hangman-buttons {
     text-align: center;
     display: inline-block;
+    margin-top: 5px;
     /* width: 250px; */
 
 }
 
 .Btn-restart {
     text-align: center;
+    background-color: steelblue;
     display: block;
     margin: 0 auto;
+    border: none;
+    outline: none;
 }
 
 button:hover {
     background-color: red;
+}
+
+.letter-btn {
+    background-color: steelblue;
+    font-size: 25px;
+    border: 1px solid crimson;
+    color: white;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+.disabled {
+    background-color: rgba(70, 130, 180, 0.5);
+    color: grey;
+    border: none;
+    margin: 0px 5px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.letter-btn:hover {
+    background-color: white;
+    color: steelblue;
+    border: none;
 }

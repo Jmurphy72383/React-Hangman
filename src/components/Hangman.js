@@ -35,10 +35,13 @@ class Hangman extends Component {
             value={ltr}
             onClick={this.handleGuess}
             disabled={this.state.guessed.has(ltr)}
-            style={{backgroundColor: 'steelgrey',
-                    fontSize: '20px',
-                    border: '1px solid steelblue',
-                    margin: '3px'}}
+            className={this.state.guessed.has(ltr) ? "disabled" : "letter-btn"}
+            // style={{backgroundColor: 'steelblue',
+            //         fontSize: '25px',
+            //         border: '1px solid crimson',
+            //         color: 'white',
+            //         margin: '0px 5px',
+            //         padding: '5px'}}
             >
             {ltr}
             </button>));
@@ -81,15 +84,19 @@ class Hangman extends Component {
         if(gameOver) gameState = 'You Lose!';
         
         return(
-            <div>
-                {/* <h1 className="Title-H1">Game of Thrones</h1> */}
-                <h1 className="Title-H1">Hangman</h1>
-                <img src={imgSrc} alt={altTxt}></img>
-                <p>Wrong Guesses: {this.state.numWrong}</p>
-                <p className="Picked-word">{gameOver ? this
+            <div className="hangman-div">
+                <div className="bimg-div">
+                    <img src={imgSrc} alt={altTxt}></img>
+                    <p>Wrong Guesses: {this.state.numWrong}</p>
+                    <p className="Picked-word">{gameOver ? this
                     .state.answer : this.answerWord()}</p>
-                <p className="Hangman-buttons">{gameState}</p>
-                <button className="Btn-restart" onClick={this.handleRestart}>RESTART</button>
+                </div>
+                
+                <div className="btn-div">
+                    <p className="Hangman-buttons">{gameState}</p>
+                    <button className="Btn-restart" onClick={this.handleRestart}>RESTART</button>
+                </div>
+                
             </div>
         )
     }
