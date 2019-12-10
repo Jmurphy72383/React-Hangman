@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d62769edd9c1466037342c94493c3b7",
+    "revision": "e8fc68da086f2bbf546edee0c82ab54b",
     "url": "/React-Hangman/index.html"
   },
   {
-    "revision": "a175469e290e45698019",
-    "url": "/React-Hangman/static/css/main.0226ee52.chunk.css"
+    "revision": "9d3da975ca02aaa73c90",
+    "url": "/React-Hangman/static/css/main.a7a66078.chunk.css"
   },
   {
     "revision": "c76acbd8c3450c465efd",
     "url": "/React-Hangman/static/js/2.4cc8969d.chunk.js"
   },
   {
-    "revision": "a175469e290e45698019",
-    "url": "/React-Hangman/static/js/main.d92bdc1f.chunk.js"
+    "revision": "9d3da975ca02aaa73c90",
+    "url": "/React-Hangman/static/js/main.81b20e56.chunk.js"
   },
   {
     "revision": "0d894d6e3c1eef21888d",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-Hangman/static/media/6.c80394c2.jpg"
   },
   {
-    "revision": "6af6233fe482302c26d3668cb77cd004",
-    "url": "/React-Hangman/static/media/got_faces.6af6233f.jpg"
+    "revision": "1128a31a0b69ec1fb1dd3c159e5f18c4",
+    "url": "/React-Hangman/static/media/got_faces1.1128a31a.jpg"
   }
 ]);
